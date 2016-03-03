@@ -1,19 +1,19 @@
 // Your JS goes here
-for(var i=0; i < 10; i++){
-  addElement("body", "div");
+for(var i=0; i < 54; i++){
+  addElement("body", document.createElement("div"));
 }
 
-var tiles = querySelectorAll("div");
-tiles.forEach(function(div, idx){
-  div.style.display = "float-left";
-  div.style.width = "11.1%";
-  div.style.paddingBottom = "11.1%";
-  if(idx % 2 === 0) {
-    div.style.backgroundColor = "red";
+var tiles = document.querySelectorAll("div");
+for(var i=0; i < tiles.length; i++){
+  tiles[i].style.float = "left";
+  tiles[i].style.width = "11.1%";
+  tiles[i].style.paddingBottom = "11.1%";
+  if(i % 2 === 0) {
+    tiles[i].style.backgroundColor = "red";
   } else {
-    div.style.backgroundColor = "black";
+    tiles[i].style.backgroundColor = "black";
   }
-});
+}
 
 function addElement(location, element){
   document[location].appendChild(element);
